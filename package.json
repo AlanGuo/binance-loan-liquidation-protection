@@ -1,11 +1,20 @@
 {
-  "name": "binance-auto-signin",
+  "name": "binace-auto-sign",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev src/index.ts",
+    "pm2": "pm2 reload ecosystem.json"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "puppeteer": "^13.5.1",
+    "puppeteer-core": "^13.5.1",
+    "random-useragent": "^0.5.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^3.9.6"
+  }
 }
