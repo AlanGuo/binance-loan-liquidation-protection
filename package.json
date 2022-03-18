@@ -1,5 +1,5 @@
 {
-  "name": "binace-auto-sign",
+  "name": "binance-loan-order",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.1",
     "colors": "^1.4.0",
+    "config": "^3.3.7",
     "puppeteer": "^13.5.1",
     "puppeteer-core": "^13.5.1",
     "random-useragent": "^0.5.0",

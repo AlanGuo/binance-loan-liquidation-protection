@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  # Redis
+  redis:
+    image: redis:latest
+    container_name: binance_loan_orders_redis
+    command: redis-server --dir /data
+    restart: always
+    volumes:
+    - ./test_data/redis:/data
+    ports:
+      - 6379:6379
+
+#networks:
+#  mongo_cluster:
