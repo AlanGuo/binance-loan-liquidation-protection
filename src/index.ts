@@ -5,7 +5,6 @@ const randomUseragent = require("random-useragent");
 
 const USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36";
 const RETAIL_ORDER_URL = "https://www.binance.com/bapi/margin/v1/private/collateral-order/query-retail-orders";
-const BROWSER_URL = "http://127.0.0.1:9222";
 const EXECUTABLE_PATH = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const liquidationPriceRate = 1.05;
 
@@ -85,8 +84,8 @@ const pageResponse = async (response: puppeteer.HTTPResponse) => {
   do {
     // 延时一分钟
     await page.reload();
+    await page.waitForSelector("#tab-ONGOING_ORDERS");
+    await page.click("#tab-ONGOING_ORDERS");
     await page.waitForTimeout(1000 * 60);
   } while(true)
-  // await browser.disconnect();
-  // await page.click("#click_login_submit");
 })();
